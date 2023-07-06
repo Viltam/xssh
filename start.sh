@@ -1,8 +1,8 @@
 #!/bin/bash
 source /app/config.sh
 
-service ssh start
-service nginx start
+service ssh restart
+service nginx restart
 
 echo "set ngrok token: $NGROK_TOKEN"
 ngrok authtoken $NGROK_TOKEN
