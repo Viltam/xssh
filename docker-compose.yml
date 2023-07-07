@@ -3,4 +3,6 @@ services:
   web:
     build: .
     ports:
+      - "80:80"
       - "88:88"
+      - "443:443"
