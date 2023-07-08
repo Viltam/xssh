@@ -1,8 +1,21 @@
 version: "3.9"  # optional since v1.27.0
 services:
-  web:
+  webs:
     build: .
     ports:
       - "80:80"
-      - "88:88"
-      - "443:443"
+name: ssh
+image: okteto/golang:1
+command:
+- bash
+workdir: /app
+forward:
+  - 2345:2345
+  - 2220:2222
+volumes:
+ - /go
+persistentVolume:
+  enabled: true
+securityContext:
+  capabilities:
+    add: ["SYS_PTRACE"]
