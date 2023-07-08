@@ -4,8 +4,3 @@ services:
     build: .
     ports:
       - "80:80"
-ssh:
-  web:
-    build: .
-    ports:
-      - "88:88"
