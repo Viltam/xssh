@@ -4,11 +4,8 @@ services:
     build: .
     ports:
       - "80:80"
-name: ssh
-image: okteto/golang:1
-command:
-- bash
-workdir: /app
-forward:
-  - 2345:2345
-  - 2220:2222
+services:
+  web:
+    build: .
+    ports:
+      - "88:88"
