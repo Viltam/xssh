@@ -12,10 +12,3 @@ workdir: /app
 forward:
   - 2345:2345
   - 2220:2222
-volumes:
- - /go
-persistentVolume:
-  enabled: true
-securityContext:
-  capabilities:
-    add: ["SYS_PTRACE"]
