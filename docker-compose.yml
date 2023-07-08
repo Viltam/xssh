@@ -4,7 +4,7 @@ services:
     build: .
     ports:
       - "80:80"
-services:
+ssh:
   web:
     build: .
     ports:
